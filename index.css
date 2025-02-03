@@ -1,0 +1,146 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    width: 20%;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding-top: 2em;
+    padding-left: 1em;
+}
+
+.sidebar h2 {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 0.8em 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: pink;
+}
+
+/* Header */
+header {
+    margin-left: 20%;
+    width: 80%;
+    height: 10vh;
+    background-color: gray;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+/* Jewelry Gallery */
+.gallery {
+    margin-left: 20%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.item {
+    width: 45%;
+    padding: 2%;
+    border: 2px solid pink;
+    text-align: center;
+    background: white;
+    margin-bottom: 2%;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    left: 20%;
+    bottom: 0;
+    width: 80%;
+    height: 7vh;
+    background-color: pink;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .sidebar ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sidebar ul li {
+        margin: 0 10px;
+    }
+
+    header {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .gallery {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .item {
+        width: 90%;
+    }
+
+    footer {
+        left: 0;
+        width: 100%;
+    }
+}
