@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viki jewelry</title>
-    <link rel="stylesheet" href="index.css"></head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Viki jewelry</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+
     <body>
-        <div class="container">
+        <main>
             <!-- Sidebar Menu -->
             <nav class="sidebar">
                 <h2>Jewelry Categories</h2>
@@ -18,36 +22,57 @@
                     <li><a href="images\mock.png">Watches</a></li>
                 </ul>
             </nav>
-    
+
             <!-- Header -->
             <header>
                 Viki's Jewelry
             </header>
-    
-            <!-- Gallery Section -->
+
+            <!-- Gallery -->
+            <!-- Best selling -->
             <section class="gallery">
-                <div class="item">
-                    <img src="/images/mock.png" alt="Jewelry Item">
-                    <h3>Elegant Necklace</h3>
+                <!-- removed top padding because first element -->
+                <div class="collection_title" style="padding-top: 0em;">
+                    <h2>Best Sellers ✩</h2>
                 </div>
                 <div class="item">
-                    <img src="/images/mock.png" alt="Jewelry Item">
+                    <img src="best/earrings.jpg" alt="Jewelry Item">
+                    <h3>Elegant earrings</h3>
+                </div>
+                <div class="item">
+                    <img src="best/candle.jpg" alt="Jewelry Item">
                     <h3>Diamond Earrings</h3>
                 </div>
                 <div class="item">
-                    <img src="/images/mock.png" alt="Jewelry Item">
+                    <img src="best/mock.png" alt="Jewelry Item">
                     <h3>Luxury Bracelet</h3>
                 </div>
                 <div class="item">
-                    <img src="/images/mock.png" alt="Jewelry Item">
+                    <img src="best/mock.png" alt="Jewelry Item">
                     <h3>Classic Ring</h3>
                 </div>
             </section>
-    
-            <!-- Footer -->
-            <footer>
-                <h2>Viki's Contact || Viki's Address</h2>
-            </footer>
-        </div>
+
+            <!-- Newest -->
+            <section class="gallery">
+                <div class="collection_title">
+                    <h2>Newest ✩</h2>
+                </div>
+                <div class="items-container">
+                    <div class="items-template">
+                        <div class="item">
+                            <img class="item-img" src="" alt="">
+                            <h3 class="item-text"></h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <h2>Viki's Contact || Viki's Address</h2>
+        </footer>
     </body>
+
 </html>
