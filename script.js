@@ -1,17 +1,34 @@
-const items = [
-    { img: "images/earrings.jpg", name: "Elegant Earrings" },
-    { img: "images/candle.jpg", name: "Diamond Earrings" },
-    { img: "images/mock.png", name: "Luxury Bracelet" },
-    { img: "images/mock.png", name: "Classic Ring" }
+console.log("Script is running!");
+
+const bestItems = [
+    { img: "best/earrings.jpg", name: "Elegant Earrings" },
+    { img: "best/mock.png", name: "Diamond Earrings" },
+    { img: "best/mock.png", name: "Luxury Bracelet" },
+    { img: "best/mock.png", name: "Classic Ring" }
 ];
 
-const container = document.getElementById("items-container");
-const template = document.getElementById("items-template");
+const newItems = [
+    { img: "newest/mock.png", name: "Elegant Earrings" },
+    { img: "newest/mock.png", name: "Diamond Earrings" },
+    { img: "newest/mock.png", name: "Luxury Bracelet" },
+    { img: "newest/mock.png", name: "Classic Ring" }
+];
 
-items.forEach(item => {
-    const clone = template.content.cloneNode(true);
-    clone.querySelector(".item-img").src = item.img;
-    clone.querySelector(".item-img").alt = item.name;
-    clone.querySelector("item-text").textContent = item.name;
-    container.appendChild(clone);
-});
+const bestGal = document.getElementById("bestGal");
+const newsGal = document.getElementById("newsGal");
+
+const bestTemp = document.getElementById("bestTemp");
+const newsTemp = document.getElementById("newsTemp");
+
+galleryP(bestItems, bestTemp, bestGal);
+galleryP(newItems, newsTemp, newsGal);
+
+function galleryP(items, template, gallery) {
+    items.forEach(item => {
+        const clone = template.content.cloneNode(true);
+        clone.querySelector(".item-img").src = item.img;
+        clone.querySelector(".item-img").alt = item.name;
+        clone.querySelector(".item-text").textContent = item.name;
+        gallery.appendChild(clone);
+    });
+}

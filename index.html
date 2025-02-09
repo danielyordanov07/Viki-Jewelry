@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Viki jewelry</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </head>
 
     <body>
@@ -15,11 +15,11 @@
             <nav class="sidebar">
                 <h2>Jewelry Categories</h2>
                 <ul>
-                    <li><a href="images\mock.png">Necklaces</a></li>
-                    <li><a href="images\mock.png">Earrings</a></li>
-                    <li><a href="images\mock.png">Bracelets</a></li>
-                    <li><a href="images\mock.png">Rings</a></li>
-                    <li><a href="images\mock.png">Watches</a></li>
+                    <li><a href="">Necklaces</a></li>
+                    <li><a href="">Earrings</a></li>
+                    <li><a href="">Bracelets</a></li>
+                    <li><a href="">Rings</a></li>
+                    <li><a href="">Watches</a></li>
                 </ul>
             </nav>
 
@@ -30,42 +30,29 @@
 
             <!-- Gallery -->
             <!-- Best selling -->
-            <section class="gallery">
-                <!-- removed top padding because first element -->
-                <div class="collection_title" style="padding-top: 0em;">
-                    <h2>Best Sellers ✩</h2>
+            <section id="bestGal" class="gallery">
+                <div class="collection_title">
+                    <h2>Best ✩</h2>
                 </div>
-                <div class="item">
-                    <img src="best/earrings.jpg" alt="Jewelry Item">
-                    <h3>Elegant earrings</h3>
-                </div>
-                <div class="item">
-                    <img src="best/candle.jpg" alt="Jewelry Item">
-                    <h3>Diamond Earrings</h3>
-                </div>
-                <div class="item">
-                    <img src="best/mock.png" alt="Jewelry Item">
-                    <h3>Luxury Bracelet</h3>
-                </div>
-                <div class="item">
-                    <img src="best/mock.png" alt="Jewelry Item">
-                    <h3>Classic Ring</h3>
-                </div>
+                <template id="bestTemp" class="items-template">
+                    <div class="item">
+                        <img class="item-img" src alt>
+                        <h3 class="item-text"></h3>
+                    </div>
+                </template>
             </section>
 
             <!-- Newest -->
-            <section class="gallery">
+            <section id="newsGal" class="gallery">
                 <div class="collection_title">
                     <h2>Newest ✩</h2>
                 </div>
-                <div class="items-container">
-                    <div class="items-template">
-                        <div class="item">
-                            <img class="item-img" src="" alt="">
-                            <h3 class="item-text"></h3>
-                        </div>
+                <template id="newsTemp" class="items-template">
+                    <div class="item">
+                        <img class="item-img" src alt>
+                        <h3 class="item-text"></h3>
                     </div>
-                </div>
+                </template>
             </section>
         </main>
 
