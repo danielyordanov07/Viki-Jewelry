@@ -35,12 +35,11 @@ function galleryP(items, template, gallery) {
 
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "20%";
+    document.getElementById("sidebar-main").style.width = "20%";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
   
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "#f9f9f9";
+    document.getElementById("sidebar-main").style.width = "0%";
+    document.main.style.backgroundColor = "#f9f9f9";
   }

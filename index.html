@@ -11,7 +11,7 @@
 
     <body>
         <!-- Sidebar Menu -->
-        <nav class="sidebar">
+        <nav id="sidebar-main" class="sidebar">
             <h2>Jewelry Categories</h2>
             <ul>
                 <li><a href="">Necklaces</a></li>
@@ -23,38 +23,38 @@
         </nav>
             <main>
             <!-- Header -->
-            <header>
-                <button id="navBtn">≡</button>
-                <div>Viki's Jewelry</div>
-            </header>
+                <header>
+                    <button class="navBtn" onclick="openNav()">≡</button>
+                    <div class="head-text">Viki's Jewelry</div>
+                </header>
 
-            <!-- Gallery -->
-            <!-- Best selling -->
-            <section id="bestGal" class="gallery">
-                <div class="collection_title">
-                    <h2>Best ✩</h2>
-                </div>
-                <template id="bestTemp" class="items-template">
-                    <div class="item">
-                        <img class="item-img" src alt>
-                        <h3 class="item-text"></h3>
+                <!-- Gallery -->
+                <!-- Best selling -->
+                <section id="bestGal" class="gallery">
+                    <div class="collection_title">
+                        <h2>Best ✩</h2>
                     </div>
-                </template>
-            </section>
+                    <template id="bestTemp" class="items-template">
+                        <div class="item">
+                            <img class="item-img" src alt>
+                            <h3 class="item-text"></h3>
+                        </div>
+                    </template>
+                </section>
 
-            <!-- Newest -->
-            <section id="newsGal" class="gallery">
-                <div class="collection_title">
-                    <h2>Newest ✩</h2>
-                </div>
-                <template id="newsTemp" class="items-template">
-                    <div class="item">
-                        <img class="item-img" src alt>
-                        <h3 class="item-text"></h3>
+                <!-- Newest -->
+                <section id="newsGal" class="gallery">
+                    <div class="collection_title">
+                        <h2>Newest ✩</h2>
                     </div>
-                </template>
-            </section>
-        </main>
+                    <template id="newsTemp" class="items-template">
+                        <div class="item">
+                            <img class="item-img" src alt>
+                            <h3 class="item-text"></h3>
+                        </div>
+                    </template>
+                </section>
+            </main>
 
         <!-- Footer -->
         <footer>

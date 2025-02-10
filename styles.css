@@ -56,8 +56,7 @@ main{
 }
 
 /* Header */
-header:not(#navBtn) {
-    width: flex;
+header:not(.navBtn) {
     height: 10vh;
     background-color: gray;
     text-align: center;
@@ -67,7 +66,9 @@ header:not(#navBtn) {
     font-size: 2em;
     color: white;
 }
-header #navBtn{
+
+.navBtn{
+    width: 1em;
     height: 7vh;
     background-color: gray;
     font-size: 2em;
