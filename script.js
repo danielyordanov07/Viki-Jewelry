@@ -57,6 +57,7 @@ function closeNav() {
     document.getElementById("drawer-main").style.width = "0";
     document.getElementsByTagName("main")[0].style.marginLeft = "0";
     document.getElementsByTagName("footer")[0].style.marginLeft = "0";
+    document.getElementsByTagName("footer")[0].style.justifyContent = "center";
     document.body.style.backgroundColor = "#f9f9f9";
 }
 
