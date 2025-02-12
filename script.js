@@ -14,16 +14,18 @@ const newItems = [
     { img: "newest/mock.png", name: "Classic Ring" }
 ];
 
-const bestGal = document.getElementById("bestGal");
-const newsGal = document.getElementById("newsGal");
+document.addEventListener('DOMContentLoaded', () => {
+    const bestGal = document.getElementById("bestGal");
+    const newsGal = document.getElementById("newsGal");
 
-const bestTemp = document.getElementById("bestTemp");
-const newsTemp = document.getElementById("newsTemp");
+    const bestTemp = document.getElementById("bestTemp");
+    const newsTemp = document.getElementById("newsTemp");
 
-galleryP(bestItems, bestTemp, bestGal);
-galleryP(newItems, newsTemp, newsGal);
+    populateGallery(bestItems, bestTemp, bestGal);
+    populateGallery(newItems, newsTemp, newsGal);
+});
 
-function galleryP(items, template, gallery) {
+function populateGallery(items, template, gallery) {
     items.forEach(item => {
         const clone = template.content.cloneNode(true);
         clone.querySelector(".item-img").src = item.img;
@@ -33,13 +35,33 @@ function galleryP(items, template, gallery) {
     });
 }
 
-
 function openNav() {
-    document.getElementById("sidebar-main").style.width = "20%";
+    document.getElementById("drawer-main").style.width = "20%";
+    document.getElementsByTagName("main")[0].style.marginLeft = "20%";
+    document.getElementsByTagName("footer")[0].style.marginLeft = "20%";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
-  
-  function closeNav() {
-    document.getElementById("sidebar-main").style.width = "0%";
-    document.main.style.backgroundColor = "#f9f9f9";
-  }
+    document.addEventListener('click', checkNav);
+}
+
+function checkNav(e){
+    let coords = getXY();
+    console.log(e);
+    console.log(coords);
+    if (e.clientX >= coords.width && e.clientY >= coords.height) {
+        closeNav();
+    }
+}
+
+function closeNav() {
+    console.log("closeNav called");
+    document.getElementById("drawer-main").style.width = "0";
+    document.getElementsByTagName("main")[0].style.marginLeft = "0";
+    document.getElementsByTagName("footer")[0].style.marginLeft = "0";
+    document.body.style.backgroundColor = "#f9f9f9";
+}
+
+function getXY(){
+    let width = (window.innerWidth / 100) * 20;
+    let height = (window.innerHeight / 100) * 10;
+    return { width, height };
+}

@@ -10,8 +10,8 @@
     </head>
 
     <body>
-        <!-- Sidebar Menu -->
-        <nav id="sidebar-main" class="sidebar">
+        <!-- Drawer Menu -->
+        <nav id="drawer-main" class="drawer">
             <h2>Jewelry Categories</h2>
             <ul>
                 <li><a href="">Necklaces</a></li>
@@ -21,40 +21,39 @@
                 <li><a href="">Watches</a></li>
             </ul>
         </nav>
-            <main>
-            <!-- Header -->
-                <header>
-                    <button class="navBtn" onclick="openNav()">≡</button>
-                    <div class="head-text">Viki's Jewelry</div>
-                </header>
-
-                <!-- Gallery -->
-                <!-- Best selling -->
-                <section id="bestGal" class="gallery">
-                    <div class="collection_title">
-                        <h2>Best ✩</h2>
+        <!-- Header -->
+        <header>
+            <button class="navBtn" onclick="openNav()">≡</button>
+            <div class="head-text">Viki's Jewelry</div>
+        </header>
+        <main>
+            <!-- Gallery -->
+            <!-- Best selling -->
+            <section id="bestGal" class="gallery">
+                <div class="collection_title">
+                    <h2>Best ✩</h2>
+                </div>
+                <template id="bestTemp" class="items-template">
+                    <div class="item">
+                        <img class="item-img" src alt>
+                        <h3 class="item-text"></h3>
                     </div>
-                    <template id="bestTemp" class="items-template">
-                        <div class="item">
-                            <img class="item-img" src alt>
-                            <h3 class="item-text"></h3>
-                        </div>
-                    </template>
-                </section>
+                </template>
+            </section>
 
-                <!-- Newest -->
-                <section id="newsGal" class="gallery">
-                    <div class="collection_title">
-                        <h2>Newest ✩</h2>
+            <!-- Newest -->
+            <section id="newsGal" class="gallery">
+                <div class="collection_title">
+                    <h2>Newest ✩</h2>
+                </div>
+                <template id="newsTemp" class="items-template">
+                    <div class="item">
+                        <img class="item-img" src alt>
+                        <h3 class="item-text"></h3>
                     </div>
-                    <template id="newsTemp" class="items-template">
-                        <div class="item">
-                            <img class="item-img" src alt>
-                            <h3 class="item-text"></h3>
-                        </div>
-                    </template>
-                </section>
-            </main>
+                </template>
+            </section>
+        </main>
 
         <!-- Footer -->
         <footer>
