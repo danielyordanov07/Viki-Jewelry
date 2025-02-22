@@ -37,8 +37,8 @@ function populateGallery(items, template, gallery) {
 
 function openNav() {
     document.getElementById("drawer-main").style.width = "20%";
+    document.getElementsByTagName("main")[0].style.width = "80%";
     document.getElementsByTagName("main")[0].style.marginLeft = "20%";
-    document.getElementsByTagName("footer")[0].style.marginLeft = "20%";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     document.addEventListener('click', checkNav);
 }
@@ -56,8 +56,7 @@ function closeNav() {
     console.log("closeNav called");
     document.getElementById("drawer-main").style.width = "0";
     document.getElementsByTagName("main")[0].style.marginLeft = "0";
-    document.getElementsByTagName("footer")[0].style.marginLeft = "0";
-    document.getElementsByTagName("footer")[0].style.justifyContent = "center";
+    document.getElementsByTagName("main")[0].style.width = "100%";
     document.body.style.backgroundColor = "#f9f9f9";
 }
 
@@ -66,3 +65,26 @@ function getXY(){
     let height = (window.innerHeight / 100) * 10;
     return { width, height };
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let expandBtns = document.querySelectorAll(".expand-btn");
+
+    expandBtns.forEach((btn) => {
+        let subMenu = btn.nextElementSibling;
+        subMenu.style.display = "none"; // Ensure all submenus are closed on page load
+
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Close any other open submenus
+            document.querySelectorAll(".sub-drawer-list").forEach((menu) => {
+                if (menu !== subMenu) {
+                    menu.style.display = "none";
+                }
+            });
+
+            // Toggle the clicked submenu
+            subMenu.style.display = subMenu.style.display === "block" ? "none" : "block";
+        });
+    });
+});

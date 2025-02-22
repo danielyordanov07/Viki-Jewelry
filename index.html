@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Viki jewelry</title>
+        <title>Viki's Designs</title>
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
     </head>
@@ -12,21 +12,31 @@
     <body>
         <!-- Drawer Menu -->
         <nav id="drawer-main" class="drawer">
-            <h2>Jewelry Categories</h2>
-            <ul>
-                <li><a href="">Necklaces</a></li>
+            <ul class="main-drawer-list">
+                <!-- first line padding removal -->
+                <li style="padding-top: 0;">
+                    <ul class="sub-drawer-list-jewelry">
+                        <h3 href="" class="expand-btn">Jewelry</h3>
+                        <li href="">Something</li>
+                        <li href="">Something</li>
+                        <li href="">Something</li>
+                    </ul>
+                </li>
                 <li><a href="">Earrings</a></li>
                 <li><a href="">Bracelets</a></li>
                 <li><a href="">Rings</a></li>
                 <li><a href="">Watches</a></li>
             </ul>
         </nav>
+        
         <!-- Header -->
         <header>
-            <button class="navBtn" onclick="openNav()">≡</button>
-            <div class="head-text">Viki's Jewelry</div>
+            <div class="drawer-button-div"><button class="navBtn" onclick="openNav()">≡</button></div>
+            <div class="head-main">Viki's Designs</div>
+            <div class="head-right"></div>
         </header>
         <main>
+            
             <!-- Gallery -->
             <!-- Best selling -->
             <section id="bestGal" class="gallery">
@@ -54,11 +64,5 @@
                 </template>
             </section>
         </main>
-
-        <!-- Footer -->
-        <footer>
-            <h2>Viki's Contact || Viki's Address</h2>
-        </footer>
     </body>
-
 </html>

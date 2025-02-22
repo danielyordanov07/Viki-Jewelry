@@ -2,32 +2,63 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    transition: background-color .25s;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .25s;
 }
 
-body {
-    background-color: #f9f9f9;
+ul{
+    padding: 0;
 }
 
 main{
     width: flex;
-    margin-bottom: 4em;
-    transition: margin-left .25s;
+    transition: .25s;
 }
 
 /* Drawer Menu */
+.navBtn{
+    width: 1em;
+    height: 7vh;
+    background-color: transparent;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .drawer {
     width: 0;
     background-color: #333;
     color: white;
-    height: 100vh;
+    height: 85vh;
     position: fixed;
-    padding-top: 2em;
+    bottom: 0;
 
     transition: 0.25s;
     overflow-x: hidden;
-    z-index: 2;
+}
+
+.sub-drawer-list-jewelry {
+    display: none;
+    list-style: none;
+    padding-left: 1vw;
+}
+
+.sub-drawer-list-jewelry li {
+    padding: 0.5em 0;
+    display: none;
+}
+
+.expand-btn {
+    cursor: pointer;
+}
+
+ul.sub-drawer-list-jewelry{
+    padding-bottom: 1vh;
+}
+ul.sub-drawer-list-jewelry a{
+    padding-left: 1vw;
 }
 
 .drawer h2 {
@@ -38,13 +69,22 @@ main{
 .drawer h2:hover {
     color: #fafafa;
 }
-.drawer ul {
+.drawer .main-drawer-list {
+    padding: 1.2em;
+    padding-top: 0;
     list-style: none;
 }
-.drawer ul li {
+.drawer .main-drawer-list li {
     padding: 0.8em 0;
+    overflow-x: hidden;
 }
-.drawer ul li a {
+.drawer .main-drawer-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+}
+.drawer .main-drawer-list li .sub-drawer-list-jewelry {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
@@ -56,30 +96,31 @@ main{
 
 /* Header */
 header{
-    position: fixed;
-}
-
-header:not(.navBtn) {
     width: 100%;
-    height: 10vh;
-    background-color: gray;
+    height: 15vh;
+    background-color: #333;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    color: white;
+    color: #D6ADAE;
 }
 
-.navBtn{
-    width: 1em;
-    height: 7vh;
-    background-color: gray;
-    font-size: 2em;
-    color: white;
-    display: flex;
+.drawer-button-div{
+    width: 15%;
+    border-width: 100px;
     justify-content: center;
     align-items: center;
+    display: flex;
+}
+
+.head-main{
+    width: 60%;
+}
+
+.head-right{
+    width: 20%;
 }
 
 /* Jewelry Gallery */
@@ -99,8 +140,8 @@ header:not(.navBtn) {
 }
 
 .item {
-    width: 45%;
-    padding: 2%;
+    width: 22%;
+    padding: 1%;
     border: 0.3em solid pink;
     text-align: center;
     background: white;
