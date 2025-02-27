@@ -6,35 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Viki's Designs</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
+        <script src="script.js" type="module" defer></script>
+        <script src="/components/gallery.js" type="module">
+            import { bestItems, newItems, populateGallery, initGallery } from './gallery.js';
+        </script>
     </head>
 
     <body>
-        <!-- Drawer Menu -->
-        <nav id="drawer-main" class="drawer">
-            <ul class="main-drawer-list">
-                <!-- first line padding removal -->
-                <li style="padding-top: 0;">
-                    <ul class="sub-drawer-list-jewelry">
-                        <h3 href="" class="expand-btn">Jewelry</h3>
-                        <li href="">Something</li>
-                        <li href="">Something</li>
-                        <li href="">Something</li>
-                    </ul>
-                </li>
-                <li><a href="">Earrings</a></li>
-                <li><a href="">Bracelets</a></li>
-                <li><a href="">Rings</a></li>
-                <li><a href="">Watches</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Header -->
-        <header>
-            <div class="drawer-button-div"><button class="navBtn" onclick="openNav()">≡</button></div>
-            <div class="head-main">Viki's Designs</div>
-            <div class="head-right"></div>
-        </header>
+
         <main>
             
             <!-- Gallery -->
