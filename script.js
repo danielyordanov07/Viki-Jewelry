@@ -1,5 +1,5 @@
-import { header, initializeHeader } from './components/header.js';
-import { drawer, openNav, closeNav } from './components/drawer.js';
+import { header, initializeHeader } from './componentsJS/header.js';
+import { drawer, openNav, closeNav } from './componentsJS/drawer.js';
 
 
 document.body.insertAdjacentHTML("afterbegin", header()); // Adds header at the top

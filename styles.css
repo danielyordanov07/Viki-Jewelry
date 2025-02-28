@@ -9,9 +9,11 @@
 ul{
     padding: 0;
     padding-left: 0.5em;
+    user-select: none;
 }
 
 main{
+    padding: 1em;
     width: flex;
     transition: .25s;
 }
