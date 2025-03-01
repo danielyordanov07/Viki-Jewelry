@@ -31,4 +31,4 @@ function populateGallery(items, template, gallery) {
     populateGallery(bestItems, bestTemp, bestGal);
     populateGallery(newItems, newsTemp, newsGal);
 
-export { bestItems, newItems, populateGallery };
+export default populateGallery;
