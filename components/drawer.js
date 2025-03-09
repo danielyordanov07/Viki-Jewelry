@@ -37,8 +37,8 @@ const closeNav = () => {
     console.log("closeNav called");
 
     document.getElementById("drawer-main").style.width = "0";
-    document.getElementsByTagName("main")[0].style.marginLeft = "0";
     document.getElementsByTagName("main")[0].style.width = "100%";
+    document.getElementsByTagName("main")[0].style.marginLeft = "0";
     document.body.style.backgroundColor = "#f9f9f9";
 
     document.querySelectorAll(".item").forEach((item) => {
@@ -87,7 +87,8 @@ const initializeDrawer = () => {
             });
         });
 
-        
+        openNav();
+        closeNav();
     });
 };
 
