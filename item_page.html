@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="components/item-page.css">
     <script src="script.js" type="module"></script>
+    <script src="components/item_page.js"></script>
 </head>
 <body>
     <main>
@@ -24,16 +25,18 @@
                 
                 <h2 id="item-title">Title</h2>
                 <h3 id="item-price">Price</h3>
-                <p id="item-availability">Available: 0</p>
+                <p id="item-availability">Available: {{  }}</p>
                 <div id="btn-container">
                     <div>
                         <button id="reserveBtn" class="upper-button">Reserve</button>
                         <button id="requestBtn" class="upper-button">Request</button>
                     </div>
                     <div id="quantity-container">
-                        <button id="quantity-minus" class="quantity"></button>
-                        <input type="number" class="quantity">
-                        <button id="quantity-plus" class="quantity"></button>
+                        <div id="quantity-wrapper">
+                            <button id="quantity-minus" class="quantity">-</button>
+                            <input type="number" id="quantity-input" class="quantity" style="width: 5em;">
+                            <button id="quantity-plus" class="quantity">+</button>
+                        </div>
                     </div>
                 </div>
                 
