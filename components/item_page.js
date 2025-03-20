@@ -7,12 +7,13 @@ const gallery = [
 ];
 
 
-
 // Quantity input
 document.addEventListener("DOMContentLoaded", function () {
     const quantityInput = document.getElementById("quantity-input");
     const quantityMinus = document.getElementById("quantity-minus");
     const quantityPlus = document.getElementById("quantity-plus");
+
+    document.getElementById("item-availability").textContent = "Available: " + 5;
 
     quantityInput.value = quantityInput.value || 1;
 

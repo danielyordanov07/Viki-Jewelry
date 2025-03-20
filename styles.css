@@ -23,11 +23,15 @@ h3{
     cursor: pointer;
 }
 
+div{
+    border: solid red 2px;
+}
+
 /* Drawer Menu */
 .drawer-button-div{
-    width: 10%;
+    width: 25%;
     height: 15vh;
-    padding-right: 20%;
+    margin-right: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +99,7 @@ header{
 }
 
 .head-right{
-    width: 30%;
+    width: 40%;
 }
 
 /* Jewelry Gallery */
